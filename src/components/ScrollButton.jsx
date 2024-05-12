@@ -40,7 +40,7 @@ const ScrollButton = (props) => {
     >
       <icosahedronGeometry />
       <meshStandardMaterial
-        wireframe={true}
+        wireframe={false}
         color={hovered ? "red" : "white"}
       />
     </mesh>
