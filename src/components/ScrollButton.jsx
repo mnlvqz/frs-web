@@ -1,11 +1,10 @@
 import React, { useState, useRef } from "react";
 import { useScroll } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 
 const ScrollButton = (props) => {
   const meshRef = useRef();
   const scroll = useScroll();
-  const { width, height } = useThree((state) => state.viewport);
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -15,17 +14,17 @@ const ScrollButton = (props) => {
       meshRef.current.rotation.y += delta;
 
       meshRef.current.scale.set(
-        state.size.width * 0.0001,
-        state.size.width * 0.0001,
-        state.size.width * 0.0001
+        state.size.width * 0.00005,
+        state.size.width * 0.00005,
+        state.size.width * 0.00005
       );
     }
   });
 
-  const goToSection = (section) => {
+  const goToSection = () => {
     if (scroll && scroll.el) {
       scroll.el.scrollTo({
-        left: scroll.el.scrollWidth,
+        left: scroll.el.scrollWidth * props.section,
         behavior: "smooth",
       });
     }
@@ -35,10 +34,9 @@ const ScrollButton = (props) => {
     <mesh
       {...props}
       ref={meshRef}
-      onClick={(event) => goToSection(0.25)}
+      onClick={(event) => goToSection()}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
-      position={[0, height * -0.45, 0]}
     >
       <icosahedronGeometry />
       <meshStandardMaterial
