@@ -22,21 +22,25 @@ const ScrollButton = (props) => {
     }
   });
 
+  const goToSection = (section) => {
+    if (scroll && scroll.el) {
+      scroll.el.scrollTo({
+        left: scroll.el.scrollWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <mesh
       {...props}
       ref={meshRef}
-      onClick={(event) =>
-        scroll.el.scrollTo({
-          left: scroll.el.scrollWidth,
-          behavior: "smooth",
-        })
-      }
+      onClick={(event) => goToSection(0.25)}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
       position={[0, height * -0.45, 0]}
     >
-      <boxGeometry />
+      <icosahedronGeometry />
       <meshStandardMaterial
         wireframe={true}
         color={hovered ? "red" : "white"}
