@@ -20,8 +20,7 @@ body,
 
 body {
   overscroll-behavior: none;
-  background: #f0f0f0;
-  color: black;
+  background: black;
   font-family: 'Inter var', sans-serif;
   font-feature-settings: 'cv06' 1;
 }
