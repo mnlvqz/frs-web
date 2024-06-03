@@ -5,5 +5,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ["**/*.glb"],
-  base: "https://mnlvqz.github.io/web-frs",
+  base: "https://mnlvqz.github.io/frs-web",
 });
