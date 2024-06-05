@@ -53,7 +53,7 @@ const DataModal = ({ ...props }) => {
                     >
                       <Heading
                         color="white"
-                        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+                        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                       >
                         {props.decade}
                       </Heading>
