@@ -1,7 +1,8 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { ScrollControls, useScroll } from "@react-three/drei";
+import { Scroll, ScrollControls, useScroll } from "@react-three/drei";
 import Overlay from "./Overlay";
+import Carousel from "./components/Carousel";
 
 const App = () => {
   //const [backgroundColor, setBackgroundColor] = useState("orange");
@@ -11,14 +12,12 @@ const App = () => {
   return (
     <Canvas>
       <ambientLight intensity={Math.PI * 0.5} />
-      <ScrollControls horizontal={false} pages={6} damping={0.5}>
+      <ScrollControls horizontal={false} pages={10} damping={0.3}>
         <color attach="background" args={["#000000"]} />
-        {/* <ScrollNavigation />
-        <Scroll>
-          <Faces />
-        </Scroll> */}
-
-        <Overlay />
+        <Scroll></Scroll>
+        <Scroll html style={{ width: "100%" }}>
+          <Overlay />
+        </Scroll>
       </ScrollControls>
     </Canvas>
   );
