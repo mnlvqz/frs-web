@@ -9,7 +9,7 @@ const marqueeVariants = {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 16,
+        duration: 10,
         ease: "linear",
       },
     },
@@ -35,14 +35,9 @@ const Marquee = () => {
             color="white"
             fontSize={{
               base: "35px",
-              sm: "55px",
-              md: "150px",
-              lg: "85px",
-              xl: "100px",
-              "2xl": "150px",
+              md: "175px",
             }}
           >
-            Sistemas de Reconocimiento Facial Sistemas de Reconocimiento Facial
             Sistemas de Reconocimiento Facial Sistemas de Reconocimiento Facial
           </Heading>
         </motion.div>
