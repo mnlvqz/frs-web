@@ -12,6 +12,7 @@ import {
 import React from "react";
 import Marquee from "./components/Marquee";
 import DataModal from "./components/DataModal";
+import Carousel from "./components/Carousel";
 
 const theme = extendTheme({});
 
@@ -96,8 +97,8 @@ const Overlay = () => {
                 >
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1960"
+                      btnimage="./frs-web/assets/images/history/sixties/button_500.png"
+                      year="1960"
                       data="Los inicios de los SRF se remontan a la década de 1960. 
                   Producto de las investigaciones de Woody Bledsoe, Helen Chan Wolf y Charles Bisson 
                   se consiguió desarrollar el sistema RAND, este empleaba coordenadas introducidas por 
@@ -107,8 +108,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1970"
+                      btnimage="./frs-web/assets/images/history/seventies/button_500.png"
+                      year="1970"
                       data="Para 1970, Jay Goldstein, Leon D. Harmon, y Ann B. Lesk lograron expandir el número 
                   de rasgos identificables, características como el color del cabello o el grosor de los labios 
                   ahora podían ser identificados.En 1977 Takeo Kanade publicó “Computer Recognition of Human Faces”, 
@@ -117,8 +118,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1980"
+                      btnimage="./frs-web/assets/images/history/eighties/button_500.png"
+                      year="1980"
                       data="La década de 1980 representó un gran periodo de avance para el desarrollo
                   de esta tecnología gracias al exponencial desarrollo de las computadoras. Lawrence
                   Sirovich y Michael Kirby implementaron los principios del álgebra lineal para la
@@ -127,8 +128,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1990"
+                      btnimage="./frs-web/assets/images/history/nineties/button_500.png"
+                      year="1990"
                       data="Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, 
                   un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de 
                   Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) 
@@ -138,8 +139,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="2000"
+                      btnimage="./frs-web/assets/images/history/thousand/button_500.png"
+                      year="2000"
                       data="2001 fue el año en que Paul Viola y Michael Jones desarrollaron el sistema para la 
                   detección de objetos Viola-Jones enfocado en rostros. Este sistema, hacía uso de machine 
                   learning para detectar en tiempo real las características faciales."
@@ -147,8 +148,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="Hoy"
+                      btnimage="./frs-web/assets/images/history/today/button_500.png"
+                      year="Hoy"
                       data="A partir de este punto los SRF comenzaron a ser mucho
                   más eficientes y precisos en razón del uso de redes neuronales convolucionales e
                   inteligencia artificial a la par del creciente poder computacional de los sistemas en
@@ -181,8 +182,8 @@ const Overlay = () => {
                 >
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1960"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="1960"
                       data="Los inicios de los SRF se remontan a la década de 1960. 
                   Producto de las investigaciones de Woody Bledsoe, Helen Chan Wolf y Charles Bisson 
                   se consiguió desarrollar el sistema RAND, este empleaba coordenadas introducidas por 
@@ -192,8 +193,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1970"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="1970"
                       data="Para 1970, Jay Goldstein, Leon D. Harmon, y Ann B. Lesk lograron expandir el número 
                   de rasgos identificables, características como el color del cabello o el grosor de los labios 
                   ahora podían ser identificados.En 1977 Takeo Kanade publicó “Computer Recognition of Human Faces”, 
@@ -202,8 +203,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1980"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="1980"
                       data="La década de 1980 representó un gran periodo de avance para el desarrollo
                   de esta tecnología gracias al exponencial desarrollo de las computadoras. Lawrence
                   Sirovich y Michael Kirby implementaron los principios del álgebra lineal para la
@@ -212,8 +213,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="1990"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="1990"
                       data="Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, 
                   un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de 
                   Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) 
@@ -223,8 +224,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="2000"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="2000"
                       data="2001 fue el año en que Paul Viola y Michael Jones desarrollaron el sistema para la 
                   detección de objetos Viola-Jones enfocado en rostros. Este sistema, hacía uso de machine 
                   learning para detectar en tiempo real las características faciales."
@@ -232,8 +233,8 @@ const Overlay = () => {
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      imagesrc="https://bit.ly/dan-abramov"
-                      decade="Hoy"
+                      btnimage="https://bit.ly/dan-abramov"
+                      year="Hoy"
                       data="A partir de este punto los SRF comenzaron a ser mucho
                   más eficientes y precisos en razón del uso de redes neuronales convolucionales e
                   inteligencia artificial a la par del creciente poder computacional de los sistemas en
@@ -268,6 +269,11 @@ const Overlay = () => {
               </Center>
             </GridItem>
           </Grid>
+        </Container>
+
+        {/* Home */}
+        <Container maxW="100%" h="100vh" padding={0}>
+          <Carousel />
         </Container>
       </VStack>
     </ChakraProvider>
