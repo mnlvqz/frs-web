@@ -187,94 +187,109 @@ const Overlay = () => {
         </Container>
 
         {/* Techniques */}
-        <Container maxW="100%" h="100vh" padding={10} bg="pink">
-          <Grid
-            templateColumns={{ base: "1fr", lg: "repeat(5, 1fr)" }}
-            templateRows={{ base: "repeat(2, r1fr)", lg: "repeat(1, r1fr)" }}
-            gap={5}
+        <Container
+          maxW="100%"
+          h={{ base: "none", lg: "100vh" }}
+          padding={10}
+          bg="pink"
+        >
+          <Flex
+            flexDirection={{ base: "column", lg: "row-reverse" }}
+            height="100%"
+            alignItems="center"
+            justifyContent="center"
+            gap={{ base: "10", lg: "20" }}
           >
-            <GridItem colSpan={3}>
-              <Center h="100%">
-                <Grid
-                  templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
-                  templateRows={{
-                    base: "repeat(1, 1fr)",
-                    lg: "repeat(2, 1fr)",
-                  }}
-                  gap={5}
-                  padding={10}
-                >
-                  <GridItem>
-                    <DataModal
-                      previewImg="./frs-web/assets/images/techniques/holistic/button_500.png"
-                      year="Locales, holísticos e híbridos"
-                      data="Los métodos locales, como los patrones binarios locales, se enfocan en rasgos 
+            <Stack gap={5}>
+              <Heading fontSize={{ base: "3xl", lg: "4xl" }} color="white">
+                ¿Cómo funcionan?
+              </Heading>
+              <Text
+                fontSize={{ base: "xl", lg: "2xl" }}
+                textAlign="justify"
+                width={{ base: "300px", lg: "400px" }}
+                color="white"
+              >
+                Para la computación el reconocimiento facial no es una tarea
+                sencilla, representa un reto con alto nivel de complejidad en
+                razón de su funcionalidad y eficiencia. Por este motivo existen
+                múltiples enfoques y algoritmos que abordan el problema que
+                supone el identificar los rasgos faciales.
+              </Text>
+            </Stack>
+            <Grid
+              templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(2, 1fr)" }}
+              templateRows={{ base: "repeat(2, 1fr)", lg: "repeat(2, 1fr)" }}
+              width={{ base: "300px", lg: "600px" }}
+              gap={5}
+            >
+              <GridItem>
+                <DataModal
+                  previewImg="./frs-web/assets/images/techniques/holistic/button_500.png"
+                  backgroundImg={[
+                    "./frs-web/assets/images/techniques/holistic/figure_01.png",
+                    "./frs-web/assets/images/techniques/holistic/figure_02.png",
+                    "./frs-web/assets/images/techniques/holistic/figure_03.png",
+                  ]}
+                  year="Locales, holísticos e híbridos"
+                  data="Los métodos locales, como los patrones binarios locales, se enfocan en rasgos 
                       específicos del rostro para el reconocimiento. Por otro lado, los métodos holísticos, 
                       como el análisis de componentes principales en 2D, analizan la imagen facial en su totalidad. 
                       En cambio, los métodos híbridos, como las técnicas de subespacios probabilísticos locales, 
                       combinan tanto características locales como globales del rostro."
-                    />
-                  </GridItem>
-                  <GridItem>
-                    <DataModal
-                      previewImg="./frs-web/assets/images/techniques/appearance/button_500.png"
-                      year="Modelos y apariencia"
-                      data="Los métodos basados en la apariencia tratan una imagen como un punto en un espacio 
+                />
+              </GridItem>
+              <GridItem>
+                <DataModal
+                  previewImg="./frs-web/assets/images/techniques/appearance/button_500.png"
+                  backgroundImg={[
+                    "./frs-web/assets/images/techniques/appearance/figure_01.png",
+                    "./frs-web/assets/images/techniques/appearance/figure_02.png",
+                    "./frs-web/assets/images/techniques/appearance/figure_03.png",
+                    "./frs-web/assets/images/techniques/appearance/figure_04.png",
+                  ]}
+                  year="Modelos y apariencia"
+                  data="Los métodos basados en la apariencia tratan una imagen como un punto en un espacio 
                       vectorial de alta dimensión y utilizan técnicas estadísticas, como PLS, para comparar la 
                       muestra con prototipos almacenados. Los sistemas basados en modelos, como los modelos de 
                       apariencia activa, buscan modelar un rostro. Estos métodos pueden dividirse en lineales y no 
                       lineales, y las técnicas basadas en modelos pueden ser 2D o 3D."
-                    />
-                  </GridItem>
-                  <GridItem>
-                    <DataModal
-                      previewImg="./frs-web/assets/images/techniques/geometry/button_500.png"
-                      year="Geometría y plantillas"
-                      data="Los métodos basados en la geometría, como la correspondencia elástica de grafos, examinan 
+                />
+              </GridItem>
+              <GridItem>
+                <DataModal
+                  previewImg="./frs-web/assets/images/techniques/geometry/button_500.png"
+                  backgroundImg={[
+                    "./frs-web/assets/images/techniques/geometry/figure_01.png",
+                    "./frs-web/assets/images/techniques/geometry/figure_02.png",
+                    "./frs-web/assets/images/techniques/geometry/figure_03.png",
+                  ]}
+                  year="Geometría y plantillas"
+                  data="Los métodos basados en la geometría, como la correspondencia elástica de grafos, examinan 
                       los rasgos faciales locales y sus relaciones geométricas. Los métodos basados en plantillas 
                       definen un rostro como una función que se compara con un conjunto de patrones. Estos conjuntos 
                       de plantillas pueden construirse utilizando herramientas estadísticas, como los métodos de kernel."
-                    />
-                  </GridItem>
-                  <GridItem>
-                    <DataModal
-                      previewImg="./frs-web/assets/images/techniques/neural/button_500.png"
-                      year="Correspondencias, estadísticos y redes neuronales"
-                      data="Los métodos de  correspondencia de modelos representan patrones a través de modelos, píxeles, 
+                />
+              </GridItem>
+              <GridItem>
+                <DataModal
+                  previewImg="./frs-web/assets/images/techniques/neural/button_500.png"
+                  backgroundImg={[
+                    "./frs-web/assets/images/techniques/neural/figure_01.png",
+                    "./frs-web/assets/images/techniques/neural/figure_02.png",
+                    "./frs-web/assets/images/techniques/neural/figure_03.png",
+                    "./frs-web/assets/images/techniques/neural/figure_04.png",
+                  ]}
+                  year="Correspondencia, estadística y redes neuronales"
+                  data="Los métodos de  correspondencia de modelos representan patrones a través de modelos, píxeles, 
                       curvas o texturas. La función de reconocimiento generalmente se basa en una medida de distancia o 
                       correlación. En el enfoque estático, los patrones se describen como características mientras que el 
                       reconocimiento se realiza mediante una función discriminante. En los enfoques basados en redes neuronales, 
                       la representación de patrones puede variar pero siempre hace uso de una función de la red."
-                    />
-                  </GridItem>
-                </Grid>
-              </Center>
-            </GridItem>
-            <GridItem colSpan={2}>
-              <Center h="100%">
-                <Flex
-                  h="100%"
-                  direction="column"
-                  align="left"
-                  justify="center"
-                  textAlign={{ base: "justify", lg: "justify" }}
-                >
-                  <br />
-                  <Text
-                    fontSize={{ base: "xl", md: "xl", lg: "2xl" }}
-                    color="white"
-                    padding={10}
-                  >
-                    Para la computación el reconocimiento facial no es una tarea
-                    sencilla, representa un reto con alto nivel de complejidad
-                    en razón de su funcionalidad y eficiencia. Por este motivo
-                    existen múltiples enfoques y algoritmos que abordan el
-                    problema que supone el identificar los rasgos faciales.
-                  </Text>
-                </Flex>
-              </Center>
-            </GridItem>
-          </Grid>
+                />
+              </GridItem>
+            </Grid>
+          </Flex>
         </Container>
 
         {/* Home */}
