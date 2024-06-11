@@ -16,22 +16,42 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const DataModal = ({ ...props }) => {
+  const slickSettings = {
+    fade: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 4000,
+    autoplaySpeed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    cssEase: "linear",
+    adaptiveHeight: true,
+  };
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <IconButton
         onClick={onOpen}
         h="100%"
-        icon={<Image src={props.imagesrc} alt="Dan Abramov" />}
+        icon={<Image src={props.btnimage} alt="image" boxSize="256px" />}
       />
       <Modal isOpen={isOpen} onClose={onClose} size="full">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalCloseButton />
+        <ModalOverlay>
+          <Slider {...slickSettings}></Slider>
+        </ModalOverlay>
+
+        <ModalContent bg="transparent">
           <ModalBody padding={0}>
-            <Container maxW="100%" h="100vh" bg="teal" onClick={onClose}>
+            <Container maxW="100%" h="100vh" onClick={onClose} padding={0}>
               <Center h="100%" padding="20">
                 <Grid
                   templateColumns={{ base: "1fr", lg: "repeat(5, 1fr)" }}
@@ -55,7 +75,7 @@ const DataModal = ({ ...props }) => {
                         color="white"
                         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                       >
-                        {props.decade}
+                        {props.year}
                       </Heading>
                       <br />
                       <Text
@@ -70,6 +90,8 @@ const DataModal = ({ ...props }) => {
               </Center>
             </Container>
           </ModalBody>
+
+          <ModalCloseButton color="white" />
         </ModalContent>
       </Modal>
     </>
