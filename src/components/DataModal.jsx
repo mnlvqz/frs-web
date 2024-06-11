@@ -12,6 +12,7 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalOverlay,
+  Stack,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -42,55 +43,35 @@ const DataModal = ({ ...props }) => {
       <IconButton
         onClick={onOpen}
         h="100%"
-        icon={<Image src={props.btnimage} alt="image" boxSize="256px" />}
+        icon={<Image src={props.previewImg} alt="image" />}
       />
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay>
-          <Slider {...slickSettings}></Slider>
+          <Container maxW="100%" h="100vh">
+            <Slider {...slickSettings}></Slider>
+          </Container>
         </ModalOverlay>
 
         <ModalContent bg="transparent">
-          <ModalBody padding={0}>
-            <Container maxW="100%" h="100vh" onClick={onClose} padding={0}>
-              <Center h="100%" padding="20">
-                <Grid
-                  templateColumns={{ base: "1fr", lg: "repeat(5, 1fr)" }}
-                  templateRows={{
-                    base: "repeat(1, 1fr)",
-                    lg: "repeat(8, 1fr)",
-                  }}
-                  h="100%"
-                  w="100%"
-                  gap={2}
-                >
-                  <GridItem colStart={4} rowStart={4} colSpan={2} rowSpan={5}>
-                    <Flex
-                      h="100%"
-                      direction="column"
-                      align="left"
-                      justify="center"
-                      textAlign={{ base: "justify", lg: "justify" }}
-                    >
-                      <Heading
-                        color="white"
-                        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-                      >
-                        {props.year}
-                      </Heading>
-                      <br />
-                      <Text
-                        fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-                        color="white"
-                      >
-                        {props.data}
-                      </Text>
-                    </Flex>
-                  </GridItem>
-                </Grid>
-              </Center>
+          <ModalBody maxW="100%" h="100vh">
+            <Container maxW="100%" h="100vh" onClick={onClose}>
+              <Flex height="100%" alignItems="center" justifyContent="center">
+                <Stack gap={5}>
+                  <Heading fontSize={{ base: "3xl", lg: "4xl" }} color="white">
+                    {props.year}
+                  </Heading>
+                  <Text
+                    fontSize={{ base: "xl", lg: "2xl" }}
+                    textAlign="justify"
+                    width={{ base: "300px", lg: "400px" }}
+                    color="white"
+                  >
+                    {props.data}
+                  </Text>
+                </Stack>
+              </Flex>
             </Container>
           </ModalBody>
-
           <ModalCloseButton color="white" />
         </ModalContent>
       </Modal>
