@@ -172,7 +172,7 @@ const Overlay = () => {
             <GridItem colSpan={3}>
               <Center h="100%">
                 <Grid
-                  templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+                  templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
                   templateRows={{
                     base: "repeat(1, 1fr)",
                     lg: "repeat(2, 1fr)",
@@ -182,63 +182,45 @@ const Overlay = () => {
                 >
                   <GridItem>
                     <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="1960"
-                      data="Los inicios de los SRF se remontan a la década de 1960. 
-                  Producto de las investigaciones de Woody Bledsoe, Helen Chan Wolf y Charles Bisson 
-                  se consiguió desarrollar el sistema RAND, este empleaba coordenadas introducidas por 
-                  el usuario para calcular las distancias y proporciones entre los puntos de referencia y 
-                  los rasgos faciales a identificar."
+                      btnimage="./frs-web/assets/images/techniques/holistic/button_500.png"
+                      year="Locales, holísticos e híbridos"
+                      data="Los métodos locales, como los patrones binarios locales, se enfocan en rasgos 
+                      específicos del rostro para el reconocimiento. Por otro lado, los métodos holísticos, 
+                      como el análisis de componentes principales en 2D, analizan la imagen facial en su totalidad. 
+                      En cambio, los métodos híbridos, como las técnicas de subespacios probabilísticos locales, 
+                      combinan tanto características locales como globales del rostro."
                     />
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="1970"
-                      data="Para 1970, Jay Goldstein, Leon D. Harmon, y Ann B. Lesk lograron expandir el número 
-                  de rasgos identificables, características como el color del cabello o el grosor de los labios 
-                  ahora podían ser identificados.En 1977 Takeo Kanade publicó “Computer Recognition of Human Faces”, 
-                  el primer libro sobre reconocimiento facial."
+                      btnimage="./frs-web/assets/images/techniques/appearance/button_500.png"
+                      year="Modelos y apariencia"
+                      data="Los métodos basados en la apariencia tratan una imagen como un punto en un espacio 
+                      vectorial de alta dimensión y utilizan técnicas estadísticas, como PLS, para comparar la 
+                      muestra con prototipos almacenados. Los sistemas basados en modelos, como los modelos de 
+                      apariencia activa, buscan modelar un rostro. Estos métodos pueden dividirse en lineales y no 
+                      lineales, y las técnicas basadas en modelos pueden ser 2D o 3D."
                     />
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="1980"
-                      data="La década de 1980 representó un gran periodo de avance para el desarrollo
-                  de esta tecnología gracias al exponencial desarrollo de las computadoras. Lawrence
-                  Sirovich y Michael Kirby implementaron los principios del álgebra lineal para la
-                  identificación de rostros mediante el análisis de componentes principales en 1988."
+                      btnimage="./frs-web/assets/images/techniques/geometry/button_500.png"
+                      year="Geometría y plantillas"
+                      data="Los métodos basados en la geometría, como la correspondencia elástica de grafos, examinan 
+                      los rasgos faciales locales y sus relaciones geométricas. Los métodos basados en plantillas 
+                      definen un rostro como una función que se compara con un conjunto de patrones. Estos conjuntos 
+                      de plantillas pueden construirse utilizando herramientas estadísticas, como los métodos de kernel."
                     />
                   </GridItem>
                   <GridItem>
                     <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="1990"
-                      data="Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, 
-                  un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de 
-                  Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) 
-                  crearon el programa Tecnología para el Reconocimiento Facial (FERET) con el fin de establecer 
-                  un mercado del comercial de los SRF."
-                    />
-                  </GridItem>
-                  <GridItem>
-                    <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="2000"
-                      data="2001 fue el año en que Paul Viola y Michael Jones desarrollaron el sistema para la 
-                  detección de objetos Viola-Jones enfocado en rostros. Este sistema, hacía uso de machine 
-                  learning para detectar en tiempo real las características faciales."
-                    />
-                  </GridItem>
-                  <GridItem>
-                    <DataModal
-                      btnimage="https://bit.ly/dan-abramov"
-                      year="Hoy"
-                      data="A partir de este punto los SRF comenzaron a ser mucho
-                  más eficientes y precisos en razón del uso de redes neuronales convolucionales e
-                  inteligencia artificial a la par del creciente poder computacional de los sistemas en
-                  los que son implementados."
+                      btnimage="./frs-web/assets/images/techniques/neural/button_500.png"
+                      year="Correspondencias, estadísticos y redes neuronales"
+                      data="Los métodos de  correspondencia de modelos representan patrones a través de modelos, píxeles, 
+                      curvas o texturas. La función de reconocimiento generalmente se basa en una medida de distancia o 
+                      correlación. En el enfoque estático, los patrones se describen como características mientras que el 
+                      reconocimiento se realiza mediante una función discriminante. En los enfoques basados en redes neuronales, 
+                      la representación de patrones puede variar pero siempre hace uso de una función de la red."
                     />
                   </GridItem>
                 </Grid>
