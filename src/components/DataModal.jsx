@@ -28,7 +28,7 @@ const DataModal = ({ ...props }) => {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 4000,
+    speed: 8000,
     autoplaySpeed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -37,6 +37,8 @@ const DataModal = ({ ...props }) => {
     adaptiveHeight: true,
   };
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  console.log(props);
 
   return (
     <>
@@ -47,17 +49,34 @@ const DataModal = ({ ...props }) => {
       />
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay>
-          <Container maxW="100%" h="100vh">
-            <Slider {...slickSettings}></Slider>
+          <Container maxW="100%" h="100vh" padding={0}>
+            <Slider {...slickSettings}>
+              {props.backgroundImg &&
+                props.backgroundImg.length > 0 &&
+                props.backgroundImg.map((image, index) => (
+                  <Image
+                    objectFit="cover"
+                    width="100%"
+                    height="100vh"
+                    key={index}
+                    src={image}
+                    alt={`image-${index}`}
+                  />
+                ))}
+            </Slider>
           </Container>
         </ModalOverlay>
 
         <ModalContent bg="transparent">
           <ModalBody maxW="100%" h="100vh">
-            <Container maxW="100%" h="100vh" onClick={onClose}>
+            <Container onClick={onClose} maxW="100%" h="100vh">
               <Flex height="100%" alignItems="center" justifyContent="center">
-                <Stack gap={5}>
-                  <Heading fontSize={{ base: "3xl", lg: "4xl" }} color="white">
+                <Stack gap={5} padding={10} bg="rgba(0, 0, 0, 0.5)">
+                  <Heading
+                    width={{ base: "300px", lg: "400px" }}
+                    fontSize={{ base: "3xl", lg: "5xl" }}
+                    color="white"
+                  >
                     {props.year}
                   </Heading>
                   <Text
