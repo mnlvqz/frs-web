@@ -1,4 +1,5 @@
 import {
+  Box,
   Center,
   Container,
   Flex,
@@ -45,7 +46,13 @@ const DataModal = ({ ...props }) => {
       <IconButton
         onClick={onOpen}
         h="100%"
-        icon={<Image src={props.previewImg} alt="image" />}
+        icon={
+          <>
+            <Box position="relative" display="inline-block">
+              <Image src={props.previewImg} alt="image" />
+            </Box>
+          </>
+        }
       />
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay>
@@ -70,18 +77,22 @@ const DataModal = ({ ...props }) => {
         <ModalContent bg="transparent">
           <ModalBody maxW="100%" h="100vh">
             <Container onClick={onClose} maxW="100%" h="100vh">
-              <Flex height="100%" alignItems="center" justifyContent="center">
-                <Stack gap={5} padding={10} bg="rgba(0, 0, 0, 0.5)">
-                  <Heading
-                    width={{ base: "300px", lg: "400px" }}
-                    fontSize={{ base: "3xl", lg: "5xl" }}
-                    color="white"
-                  >
-                    {props.year}
+              <Flex
+                height="100%"
+                flexDirection={{ base: "column", lg: "row" }}
+                alignItems="center"
+                justifyContent="center"
+                gap={{ base: "5", lg: "20" }}
+              >
+                <Box width="750px" display={{ base: "none", lg: "block" }} />
+                <Stack gap={4} padding={10} bg="rgba(0, 0, 0, 0.5)">
+                  <Heading fontSize={{ base: "2xl", lg: "3xl" }} color="white">
+                    {props.title}
                   </Heading>
                   <Text
-                    fontSize={{ base: "xl", lg: "2xl" }}
-                    textAlign="justify"
+                    fontSize={{ base: "lg", lg: "xl" }}
+                    fontWeight="light"
+                    textAlign="left"
                     width={{ base: "300px", lg: "400px" }}
                     color="white"
                   >
