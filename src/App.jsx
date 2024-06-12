@@ -2,7 +2,6 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Scroll, ScrollControls, useScroll } from "@react-three/drei";
 import Overlay from "./Overlay";
-import Carousel from "./components/Carousel";
 
 const App = () => {
   //const [backgroundColor, setBackgroundColor] = useState("orange");
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <Canvas>
       <ambientLight intensity={Math.PI * 0.5} />
-      <ScrollControls horizontal={false} pages={10} damping={0.3}>
+      <ScrollControls horizontal={false} pages={8} damping={0.4}>
         <color attach="background" args={["#000000"]} />
         <Scroll></Scroll>
         <Scroll html style={{ width: "100%" }}>
