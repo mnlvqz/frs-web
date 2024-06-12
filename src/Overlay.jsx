@@ -47,7 +47,21 @@ const Overlay = () => {
                 width={{ base: "300px", lg: "400px" }}
                 color="white"
               >
-                Sistemas de Reconocimiento Facial
+                Sistemas de
+              </Heading>
+              <Heading
+                fontSize={{ base: "4xl", lg: "7xl" }}
+                width={{ base: "300px", lg: "400px" }}
+                color="white"
+              >
+                Reconocimiento
+              </Heading>
+              <Heading
+                fontSize={{ base: "4xl", lg: "7xl" }}
+                width={{ base: "300px", lg: "400px" }}
+                color="white"
+              >
+                Facial
               </Heading>
             </Stack>
 
