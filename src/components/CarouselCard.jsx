@@ -52,7 +52,12 @@ const CarouselCard = (props) => {
           >
             <GridItem colStart={1} rowStart={3} colSpan={5}>
               <Center height="100%">
-                <Heading textAlign="right">{props.title}</Heading>
+                <Heading
+                  textAlign="right"
+                  fontSize={{ base: "2xl", lg: "4xl" }}
+                >
+                  {props.title}
+                </Heading>
               </Center>
             </GridItem>
           </Grid>
@@ -77,8 +82,17 @@ const CarouselCard = (props) => {
             >
               <Center height="100%">
                 <Stack gap={5}>
-                  <Heading textAlign="left">{data[0]}</Heading>
-                  <Text width="100%" textAlign="justify">
+                  <Heading
+                    textAlign="left"
+                    fontSize={{ base: "2xl", lg: "4xl" }}
+                  >
+                    {data[0]}
+                  </Heading>
+                  <Text
+                    width="100%"
+                    textAlign="justify"
+                    fontSize={{ base: "lg", lg: "2xl" }}
+                  >
                     {data[1]}
                   </Text>
                 </Stack>
