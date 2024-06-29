@@ -18,9 +18,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import CarouselCard from "./components/CarouselCard";
-import { color } from "framer-motion";
+import "@fontsource/win95fa";
 
 const theme = extendTheme({
+  fonts: {
+    heading: `WIN95FA, sans-serif`,
+    body: `WIN95FA, sans-serif`,
+  },
   components: {
     Heading: {
       baseStyle: {
@@ -45,14 +49,15 @@ const Overlay = () => {
           height="100vh"
           border="4px"
           borderColor="white"
-          borderRadius="lg"
           backgroundPosition="center"
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
-          backgroundImage="./frs-web/assets/images/main/cover.webp"
+          backgroundImage="/frs-web/assets/images/main/cover.webp"
         >
           <Center height="100%">
-            <Heading>Sistemas de Reconocimiento Facial</Heading>
+            <Heading fontSize={{ base: "6xl", lg: "6xl" }} color="white">
+              Sistemas de Reconocimiento Facial
+            </Heading>
           </Center>
         </Box>
         {/* Definition */}
@@ -71,7 +76,11 @@ const Overlay = () => {
                   <Heading width="100%" textAlign="left">
                     ¿Qué son?
                   </Heading>
-                  <Text width="100%" textAlign="justify">
+                  <Text
+                    width="100%"
+                    textAlign="justify"
+                    fontSize={{ base: "lg", lg: "2xl" }}
+                  >
                     Los Sistemas de Reconocimiento Facial (SRF) son una
                     tecnología biométrica que utiliza técnicas y algoritmos de
                     visión computarizada para analizar rasgos faciales,
