@@ -82,7 +82,7 @@ const CarouselCard = (props) => {
               backgroundImage={data[2]}
             >
               <Center height="100%">
-                <Stack gap={5}>
+                <Stack gap={5} bg="moonstone.A">
                   <Heading
                     textAlign="left"
                     fontSize={{ base: "2xl", lg: "4xl" }}
