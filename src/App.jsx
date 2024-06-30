@@ -12,7 +12,7 @@ const App = () => {
     <Canvas>
       <ambientLight intensity={Math.PI * 0.5} />
       <ScrollControls horizontal={false} pages={4.66} damping={0.4}>
-        <color attach="background" args={["#000000"]} />
+        <color attach="background" args={["#203845"]} />
         <Scroll></Scroll>
         <Scroll html style={{ width: "100%" }}>
           <Overlay />
