@@ -239,104 +239,126 @@ const Overlay = () => {
           <Stack direction="row" width="100%" height="100%" spacing={0}>
             {/* Applications */}
             <CarouselCard
-              title="¿En dónde son utilizados?"
-              mainImage=""
+              title="¿Para qué son utilizados?"
+              mainImage="/frs-web/assets/images/main/face-06.webp"
               information={[
                 [
-                  "1960",
-                  "Los inicios de los SRF se remontan a la década de 1960. Producto de las investigaciones de Woody Bledsoe, Helen Chan Wolf y Charles Bisson se consiguió desarrollar el sistema RAND, este empleaba coordenadas introducidas por el usuario para calcular las distancias y proporciones entre los puntos de referencia y los rasgos faciales a identificar.",
+                  "Control de espacios",
+                  "Los SRF se usan para gestionar el acceso a edificios y áreas restringidas, verificando identidades para mejorar la seguridad.",
                   "",
                 ],
                 [
-                  "1970",
-                  "Para 1970, Jay Goldstein, Leon D. Harmon, y Ann B. Lesk lograron expandir el número de rasgos identificables, características como el color del cabello o el grosor de los labios ahora podían ser identificados. En 1977 Takeo Kanade publicó “Computer Recognition of Human Faces”,  el primer libro sobre reconocimiento facial.",
+                  "Gestión de datos biométricos",
+                  "Recopilan y analizan características faciales para crear perfiles únicos, facilitando la administración de bases de datos de identificación y emisión de documentos.",
                 ],
                 [
-                  "1980",
-                  "La década de 1980 representó un gran periodo de avance para el desarrollode esta tecnología gracias al exponencial desarrollo de las computadoras. Lawrence Sirovich y Michael Kirby implementaron los principios del álgebra lineal para la identificación de rostros mediante el análisis de componentes principales en 1988.",
+                  "Seguridad pública y vigilancia",
+                  "Permiten  identificar personas de interés en tiempo real y monitorizar multitudes, ayudando a prevenir delitos.",
                 ],
                 [
-                  "1990",
-                  "Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) crearon el programa Tecnología para el Reconocimiento Facial (FERET) con el fin de establecer un mercado del comercial de los SRF.",
+                  "Interfaces de usuario",
+                  "Facilitan el desbloqueo de dispositivos y la autenticación de usuarios, proporcionando acceso rápido y seguro a dispositivos y aplicaciones.",
                 ],
                 [
-                  "2000",
-                  "2001 fue el año en que Paul Viola y Michael Jones desarrollaron el sistema para la detección de objetos Viola-Jones enfocado en rostros. Este sistema, hacía uso de machine learning para detectar en tiempo real las características faciales.",
+                  "Mercadotecnia ",
+                  "Analizan características faciales para personalizar anuncios y promociones, ajustándose a las preferencias y estados de ánimo de los usuarios.",
                 ],
                 [
-                  "Actualidad",
-                  "A partir de este punto los SRF comenzaron a ser muchomás eficientes y precisos en razón del uso de redes neuronales convolucionales e inteligencia artificial a la par del creciente poder computacional de los sistemas en los que son implementados.",
+                  "Robótica",
+                  "Mejoran la interacción de robots y sistemas automatizados con humanos, permitiéndoles realizar tareas de manera más eficiente en diversos entornos.",
                 ],
               ]}
             />
             {/* Concerns */}
             <CarouselCard
-              title="
-                    ¿Cuáles son sus implicaciones?"
+              title="¿Cuáles son sus implicaciones?"
+              mainImage="/frs-web/assets/images/main/face-05.webp"
               information={[
                 [
-                  "1960",
-                  "Los inicios de los SRF se remontan a la década de 1960. Producto de las investigaciones de Woody Bledsoe, Helen Chan Wolf y Charles Bisson se consiguió desarrollar el sistema RAND, este empleaba coordenadas introducidas por el usuario para calcular las distancias y proporciones entre los puntos de referencia y los rasgos faciales a identificar.",
+                  "Privacidad",
+                  "El uso extensivo de SRF plantea preocupaciones sobre la privacidad de las personas, ya que implica la recopilación y almacenamiento de datos biométricos sensibles sin el consentimiento adecuado.",
                 ],
                 [
-                  "1970",
-                  "Para 1970, Jay Goldstein, Leon D. Harmon, y Ann B. Lesk lograron expandir el número de rasgos identificables, características como el color del cabello o el grosor de los labios ahora podían ser identificados. En 1977 Takeo Kanade publicó “Computer Recognition of Human Faces”,  el primer libro sobre reconocimiento facial.",
+                  "Vulnerabilidad",
+                  "Los datos faciales almacenados pueden ser vulnerables a ciberataques y accesos no autorizados, lo que podría resultar en robos de identidad o abuso de la información personal.",
                 ],
                 [
-                  "1980",
-                  "La década de 1980 representó un gran periodo de avance para el desarrollode esta tecnología gracias al exponencial desarrollo de las computadoras. Lawrence Sirovich y Michael Kirby implementaron los principios del álgebra lineal para la identificación de rostros mediante el análisis de componentes principales en 1988.",
+                  "Sesgos y discriminación",
+                  "Los algoritmos de SRF pueden presentar sesgos raciales y de género, entre otros, lo que puede llevar a discriminación y errores en la identificación, impactando de forma negativa a ciertos grupos demográficos.",
                 ],
                 [
-                  "1990",
-                  "Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) crearon el programa Tecnología para el Reconocimiento Facial (FERET) con el fin de establecer un mercado del comercial de los SRF.",
+                  "Transparencia",
+                  "A menudo las personas no son conscientes de cómo se están utilizando sus datos faciales, esto plantea problemas éticos sobre el consentimiento y la transparencia en torno al uso de esta tecnología.",
                 ],
                 [
-                  "2000",
-                  "2001 fue el año en que Paul Viola y Michael Jones desarrollaron el sistema para la detección de objetos Viola-Jones enfocado en rostros. Este sistema, hacía uso de machine learning para detectar en tiempo real las características faciales.",
+                  "Vigilancia masiva",
+                  "El uso de SRF en espacios públicos puede llevar a una vigilancia masiva, reduciendo la libertad individual creando entornos de monitoreo intrusivos y opresivos.",
                 ],
                 [
-                  "Actualidad",
-                  "A partir de este punto los SRF comenzaron a ser muchomás eficientes y precisos en razón del uso de redes neuronales convolucionales e inteligencia artificial a la par del creciente poder computacional de los sistemas en los que son implementados.",
+                  "Usos indebidos",
+                  "Existen preocupaciones sobre el potencial uso indebido de los SRF por parte de gobiernos y empresas para fines de control social, manipulación o persecución de individuos y grupos específicos.",
+                ],
+                [
+                  "Legislación y regulación insuficiente",
+                  "La rápida adopción de SRF a menudo supera el desarrollo de marcos legales y regulaciones adecuadas. Estas lagunas que pueden ser explotadas a la par de generar incertidumbre sobre los derechos de las personas.",
                 ],
               ]}
             />
           </Stack>
         </Box>
         {/* Concerns */}
-        <Box
-          width="100%"
-          height="calc(100vh / 3 * 2)"
-          border="4px"
-          borderColor="white"
-          borderRadius="lg"
-        >
+        <Box width="100%" height="calc(100vh / 3 * 2)">
           <Stack height="100%" direction="row" spacing={0}>
-            <Box flex="1" height="100%" bg="gray.700">
+            <Box flex="1" height="100%" bg="timberwolf.500">
               <Center height="100%">
                 <VStack padding={10} spacing={5}>
-                  <Heading width="100%" textAlign="left">
-                    ¿Cuáles son sus implicaciones?
+                  <Heading
+                    width="100%"
+                    fontSize={{ base: "6xl", lg: "4xl" }}
+                    color="gunmetal.500"
+                    textShadow="4px 4px 0px #4CAEBD"
+                    textAlign="left"
+                  >
+                    ¿Y el futuro?
                   </Heading>
-                  <Text width="100%" textAlign="justify">
-                    Los Sistemas de Reconocimiento Facial (SRF) son una
-                    tecnología biométrica que utiliza técnicas y algoritmos de
-                    visión computarizada para analizar rasgos faciales,
-                    comparándolos con bases de datos además de modelos
-                    preestablecidos, con el fin de identificar o verificar la
-                    identidad de las personas
+                  <Text
+                    width="100%"
+                    textAlign="justify"
+                    color="gunmetal.500"
+                    fontSize={{ base: "lg", lg: "xl" }}
+                  >
+                    La integración de los SRF será cada vez más común y se
+                    expandirá a nuevas industrias con diversas aplicaciones.
+                    Impulsado por tecnologías como la inteligencia artificial,
+                    la biotecnología, la computación en la nube y la robótica,
+                    su desarrollo y optimización nos traerán nuevos beneficios.
+                    Estas tecnologías mejorarán la eficiencia y capacidad del
+                    reconocimiento facial, impactando áreas como la seguridad,
+                    la identificación, la atención médica y la logística. Sin
+                    embargo, este avance enfrenta grandes desafíos éticos y de
+                    privacidad. La regulación y adopción responsable serán clave
+                    para garantizar un uso seguro y respetuoso de los derechos
+                    en un mundo hiperconectado y digitalizado.
                   </Text>
                 </VStack>
               </Center>
             </Box>
-            <Box flex="2" height="100%" bg="white"></Box>
+            <Box
+              flex="2"
+              height="100%"
+              backgroundPosition="center"
+              backgroundSize="cover"
+              backgroundRepeat="no-repeat"
+              backgroundImage="/frs-web/assets/images/main/face-07.webp"
+            ></Box>
           </Stack>
         </Box>
         <Box width="100%" height="calc(100vh / 3 * 2)">
           <Stack direction="row" width="100%" height="100%" spacing={0}>
             {/* Artwork */}
-            <CarouselCard title="Obra" pr="5" />
+            <CarouselCard title="Datascopio" pr="5" />
             {/* Portfolio */}
-            <CarouselCard title="Artista" pl="5" />
+            <CarouselCard title="Autor" pl="5" />
           </Stack>
         </Box>
       </VStack>
