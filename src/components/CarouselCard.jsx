@@ -40,9 +40,10 @@ const CarouselCard = (props) => {
         <Box
           width="100%"
           height="calc(100vh / 3 * 2)"
-          border="4px"
-          borderColor="white"
-          borderRadius="lg"
+          backgroundPosition="center"
+          backgroundSize="cover"
+          backgroundRepeat="no-repeat"
+          backgroundImage={props.mainImage}
         >
           <Grid
             width="100%"
@@ -50,11 +51,14 @@ const CarouselCard = (props) => {
             templateColumns="repeat(5, 1fr)"
             templateRows="repeat(5, 1fr)"
           >
-            <GridItem colStart={1} rowStart={3} colSpan={5}>
+            <GridItem colStart={1} rowStart={5} colSpan={5}>
               <Center height="100%">
                 <Heading
-                  textAlign="right"
+                  textAlign="left"
                   fontSize={{ base: "2xl", lg: "4xl" }}
+                  textShadow="4px 4px 0px #4CAEBD"
+                  width="100%"
+                  padding={10}
                 >
                   {props.title}
                 </Heading>
@@ -76,15 +80,13 @@ const CarouselCard = (props) => {
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
               backgroundImage={data[2]}
-              border="4px"
-              borderColor="white"
-              borderRadius="lg"
             >
               <Center height="100%">
                 <Stack gap={5}>
                   <Heading
                     textAlign="left"
                     fontSize={{ base: "2xl", lg: "4xl" }}
+                    color="timberwolf.500"
                   >
                     {data[0]}
                   </Heading>
@@ -92,6 +94,7 @@ const CarouselCard = (props) => {
                     width="100%"
                     textAlign="justify"
                     fontSize={{ base: "lg", lg: "2xl" }}
+                    color="timberwolf.500"
                   >
                     {data[1]}
                   </Text>
