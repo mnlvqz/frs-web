@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Canvas>
       <ambientLight intensity={Math.PI * 0.5} />
-      <ScrollControls horizontal={false} pages={4.66} damping={0.4}>
+      <ScrollControls horizontal={false} pages={4 + 1 / 3} damping={0.4}>
         <color attach="background" args={["#203845"]} />
         <Scroll></Scroll>
         <Scroll html style={{ width: "100%" }}>
