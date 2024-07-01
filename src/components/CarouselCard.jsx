@@ -75,31 +75,35 @@ const CarouselCard = (props) => {
               width="100%"
               height="calc(100vh / 3 * 2)"
               bg="blue.100"
-              padding={10}
+              padding={0}
               backgroundPosition="center"
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
               backgroundImage={data[2]}
             >
-              <Center height="100%">
-                <Stack gap={5} bg="moonstone.A">
-                  <Heading
-                    textAlign="left"
-                    fontSize={{ base: "2xl", lg: "4xl" }}
-                    color="timberwolf.500"
-                  >
-                    {data[0]}
-                  </Heading>
-                  <Text
-                    width="100%"
-                    textAlign="justify"
-                    fontSize={{ base: "lg", lg: "2xl" }}
-                    color="timberwolf.500"
-                  >
-                    {data[1]}
-                  </Text>
-                </Stack>
-              </Center>
+              <Stack gap={0} width="100%" height="100%" padding={0}>
+                <Box flex="3" height="100%" />
+                <Box flex="1" height="100%">
+                  <Stack gap={5} width="100%" bg="timberwolf.500" padding={10}>
+                    <Heading
+                      textAlign="left"
+                      fontSize={{ base: "2xl", lg: "4xl" }}
+                      color="gunmetal.500"
+                      textShadow="4px 4px 0px #4CAEBD"
+                    >
+                      {data[0]}
+                    </Heading>
+                    <Text
+                      width="100%"
+                      textAlign="justify"
+                      fontSize={{ base: "lg", lg: "xl" }}
+                      color="gunmetal.500"
+                    >
+                      {data[1]}
+                    </Text>
+                  </Stack>
+                </Box>
+              </Stack>
             </Box>
           ))}
       </Slider>
