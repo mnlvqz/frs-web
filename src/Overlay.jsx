@@ -82,6 +82,17 @@ const theme = extendTheme({
       800: "#8fb6cc",
       900: "#c7dbe5",
     },
+    saffron: {
+      100: "#342804",
+      200: "#685008",
+      300: "#9d780c",
+      400: "#d1a010",
+      500: "#efbd28", // DEFAULT color
+      600: "#f2cb54",
+      700: "#f5d87f",
+      800: "#f9e5aa",
+      900: "#fcf2d4",
+    },
   },
   fonts: {
     heading: `WIN95FA, sans-serif`,
@@ -194,7 +205,7 @@ const Overlay = () => {
                 ],
                 [
                   "1990",
-                  "Este trabajo permitió que en 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, un SRF basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) crearon el programa Tecnología para el Reconocimiento Facial (FERET) con el fin de establecer un mercado del comercial de los SRF.",
+                  "En 1991 Matthew Turk y Alex Pentland desarrollaran Eigenface, un sistema basado en vectores que empleaba visión computarizada. En 1993 la Agencia de Proyectos de Investigación Avanzados de Defensa (DARPA) y el Instituto Nacional de Estándares y Tecnología (NIST) crearon el programa Tecnología para el Reconocimiento Facial (FERET) con el fin de establecer un mercado del comercial de los SRF.",
                   "/frs-web/assets/images/history/nineties/button_500.png",
                 ],
                 [
@@ -217,19 +228,22 @@ const Overlay = () => {
                 [
                   "Locales, holísticos e híbridos",
                   "Los métodos locales, como los patrones binarios locales, se enfocan en rasgos específicos del rostro para el reconocimiento. Por otro lado, los métodos holísticos,como el análisis de componentes principales en 2D, analizan la imagen facial en su totalidad. En cambio, los métodos híbridos, como las técnicas de subespacios probabilísticos locales, combinan tanto características locales como globales del rostro.",
+                  "/frs-web/assets/images/techniques/holistic/button_500.png",
                 ],
                 [
                   "Modelos y apariencia",
                   "Los métodos basados en la apariencia tratan una imagen como un punto en un espacio vectorial de alta dimensión y utilizan técnicas estadísticas, como PLS, para comparar la muestra con prototipos almacenados. Los sistemas basados en modelos, como los modelos de  apariencia activa, buscan modelar un rostro. Estos métodos pueden dividirse en lineales y no lineales, y las técnicas basadas en modelos pueden ser 2D o 3D.",
+                  "/frs-web/assets/images/techniques/appearance/button_500.png",
                 ],
                 [
                   "Geometría y plantillas",
-
                   "Los métodos basados en la geometría, como la correspondencia elástica de grafos, examinan  los rasgos faciales locales y sus relaciones geométricas. Los métodos basados en plantillas  definen un rostro como una función que se compara con un conjunto de patrones. Estos conjuntos de plantillas pueden construirse utilizando herramientas estadísticas, como los métodos de kernel.",
+                  "/frs-web/assets/images/techniques/geometry/button_500.png",
                 ],
                 [
                   "Correspondencia, estadística y redes neuronales",
                   "Los métodos de correspondencia de modelos representan patrones a través de modelos, píxeles, curvas o texturas. La función de reconocimiento generalmente se basa en una medida de distancia o correlación. En el enfoque estático, los patrones se describen como características mientras que el reconocimiento se realiza mediante una función discriminante. En los enfoques basados en redes neuronales, la representación de patrones puede variar pero siempre hace uso de una función de la red.",
+                  "/frs-web/assets/images/techniques/neural/button_500.png",
                 ],
               ]}
             />
