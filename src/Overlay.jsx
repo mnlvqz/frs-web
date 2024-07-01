@@ -370,9 +370,15 @@ const Overlay = () => {
         <Box width="100%" height="calc(100vh / 3 * 2)">
           <Stack direction="row" width="100%" height="100%" spacing={0}>
             {/* Artwork */}
-            <CarouselCard title="Datascopio" pr="5" />
+            <CarouselCard
+              title="Datascopio"
+              mainImage="/frs-web/assets/images/main/face-08.webp"
+            />
             {/* Portfolio */}
-            <CarouselCard title="Autor" pl="5" />
+            <CarouselCard
+              title="Autor"
+              mainImage="/frs-web/assets/images/main/face-09.webp"
+            />
           </Stack>
         </Box>
       </VStack>
