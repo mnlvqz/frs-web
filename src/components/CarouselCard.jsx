@@ -15,11 +15,12 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Source from "./Source";
 
 const CarouselCard = (props) => {
   const slickSettings = {
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -31,8 +32,8 @@ const CarouselCard = (props) => {
 
   return (
     <Box
-      width="50%"
-      height="100vh"
+      width={{ base: "100%", lg: "50%" }}
+      height="calc(100vh / 3 * 2)"
       paddingLeft={props.pl}
       paddingRight={props.pr}
     >
@@ -55,12 +56,13 @@ const CarouselCard = (props) => {
               <Center height="100%">
                 <Heading
                   textAlign="left"
-                  fontSize={{ base: "2xl", lg: "4xl" }}
+                  fontSize={{ base: "3xl", lg: "4xl" }}
                   textShadow="4px 4px 0px #4CAEBD"
                   width="100%"
                   padding={10}
                 >
                   {props.title}
+                  {props.source}
                 </Heading>
               </Center>
             </GridItem>
